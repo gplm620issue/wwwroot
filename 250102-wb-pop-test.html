@@ -1,4 +1,6 @@
 <button type="button" onclick="openPopup()" style="display: none" id="btn">팝업 열기</button>
+<br><br>
+<div id="ua"></div>
 
 <div id="message" style="display: none">
   지금 팝업에 있습니다..
@@ -25,4 +27,6 @@
   else {
     document.getElementById('message').style.display = 'block';
   }
+
+  document.getElementById('ua').innerHTML = navigator.userAgent;
 </script>
