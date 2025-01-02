@@ -4,9 +4,19 @@
   지금 팝업에 있습니다..
 </div>
 
+<form id="form">
+</form>
+
 <script>
   function openPopup() {
-    window.open(location.href, 'wbpop', 'width=400,height=300,menubar=no');
+    let target = 'wbpop';
+    window.open('', target, 'fullscreen=no,locationbar=no,toolbar=no,status=no,directories=no,scrollbars=yes,location=no,resizable=yes,border=0,menubar=no,width=400,height=300');
+
+    let form = document.getElementById('form');
+    form.action = location.href;
+    form.target = target;
+    form.method = 'get';
+    form.submit();
   }
 
   if (!window.opener) {
