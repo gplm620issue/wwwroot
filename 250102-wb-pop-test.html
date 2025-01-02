@@ -1,7 +1,11 @@
+<button type="button" onclick="openPopup()" style="display: none" id="btn">팝업 열기</button>
+
 <script>
   function openPopup() {
-    window.open('https://github.com', 'wbpop', 'width=400,height=300,menubar=no');
+    window.open(location.href, 'wbpop', 'width=400,height=300,menubar=no');
+  }
+
+  if (!window.opener) {
+    document.getElementById('btn').style.display = 'block';
   }
 </script>
-
-<button type="button" onclick="openPopup()">팝업 열기</button>
