@@ -1,5 +1,9 @@
 <button type="button" onclick="openPopup()" style="display: none" id="btn">팝업 열기</button>
 
+<div id="message" style="display: none">
+  지금 팝업에 있습니다..
+</div>
+
 <script>
   function openPopup() {
     window.open(location.href, 'wbpop', 'width=400,height=300,menubar=no');
@@ -7,5 +11,8 @@
 
   if (!window.opener) {
     document.getElementById('btn').style.display = 'block';
+  }
+  else {
+    document.getElementById('message').style.display = 'block';
   }
 </script>
